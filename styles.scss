@@ -15,14 +15,15 @@ $buttonFontSize: 2rem;
 header {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    // width: 100%;
     padding-bottom: 0rem;
     z-index: 100;
     height: 10vh;
     padding: 2rem;
+    
 
     .nav-menu {
-        position: absolute;
+        position: fixed;
         left: 100%;
         background-color: white;
         z-index: 1;
@@ -42,8 +43,8 @@ header {
             
 
             a {
-                
-                color: black;
+                color: rgb(5, 119, 218);
+                // color: black;
                 text-decoration: none;
                 padding: 0rem;
                 font-size:$mainFontSize;
@@ -60,6 +61,7 @@ header {
                 left: 50%;
                 
                 background:black;
+                
                 transition: width 0.3s ease 0s, left 0.3s ease 0s;
                 width: 0;
             }
@@ -67,6 +69,7 @@ header {
             a:hover:after {
                 width: 100%;
                 left: 0;
+                
             }
         }
     }
@@ -108,53 +111,153 @@ header {
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     background-color: black;
+    
   
 }
+.hero{
+    font-family: $font-primary;
+    font-size: $mainFontSize;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    border: 1.5px solid;
+    margin: 2rem;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    
+    h2,h3{
+        padding: 1rem;
+        color: rgb(5, 119, 218);
+    }
+    .btn{
+        background-color: rgb(5, 119, 218);
+    }
+    .btn:hover{
+        background-color: rgba(5, 119, 218, 0.472);
+        cursor: pointer;
+        transition: .6s;
+    }
+}
 
+.info{
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    flex-direction: row;
+    margin-top: 3rem;
+    margin-left: 1rem;
 
+    h2{
+        font-size: 2rem;
+        font-family: $font-secondary;
+        padding: 1.5rem;
+        color: rgb(5, 119, 218);
+    }
+}
 
+img{
+    height: 10rem;
+    width: auto;
+    
+}
+
+form input{
+    padding: 1.5rem;
+}
+
+form .btn{
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+//CONTAINER THAT HOLDS ESPRESSO MACHINE IMAGE, USES FLEX-BOX TO ALIGN THEM VERTICALLY
+//CONTAINER ALSO SIZES ESPRESSO MACHINE IMAGES
 .container{
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
     flex-direction: column;
-    height: 100%;
     
-    
-    
-
-}
-
-.container img{
+    height: 90vh;
     width: 100%;
-    height: auto;
-    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   margin-top: 2rem;
+   
 
 }
 
-.container .btn{
-    position: absolute;
-    padding: 2rem;
-    background-color: rgba(27, 27, 27, 0.774);
-    border-radius: 1rem;
+.btn{
     
+    background-color: rgba(0, 0, 0, 0.513);
+    padding: 2rem;
+    margin: 2rem;
+    border: .2rem;
+    border-color: white;
+    border-style: solid;
 
     a{
+        font-size: 2rem;
+        text-decoration: none;
         color: white;
-        font-size: $buttonFontSize;
-        font-family: $font-primary;
+        font-family: $font-secondary;
     }
-
+    
 }
 
-a {
-
-    text-decoration: none;
-    padding: 0rem;
-    font-size: 1rem;
-    flex-direction: row;
-    text-transform: uppercase;
+.btn:hover{
+    background-color: rgba(39, 39, 39, 0.582);
+    transition: .6s;
 }
+.logo{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width:90vw;
+    height:5vh;
+}
+
+//LOGO IMAGES
+.logo-LP{
+    background-image: url("resources/steamlogo_lp-white2.png");
+}
+
+.logo-EP{
+    background-image: url("resources/steamlogo_EP-white3.png");
+}
+
+.logo-SG{
+    background-image: url("resources/sg-logo-white.png");
+}
+
+.logo-espv3{
+    background-image: url("resources/espv3-logo-white.png");
+}
+
+
+
+//ESPRESSO MACHINE IMAGES FOR EACH CONTAINER
+.image-lp{
+    background-image: url("https://slayerespresso.com/wp-content/uploads/2021/05/steamlp-slide2.jpg");
+    box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.3);
+}
+.image-ep{
+    background-image: url("https://slayerespresso.com/wp-content/uploads/2021/05/steamep-slide.jpg");
+    box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.3);
+}
+.image-sg{
+    background-image: url("https://slayerespresso.com/wp-content/uploads/2021/06/sg-slide.jpg");
+    box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.image-espv3{
+    background-image: url("https://slayerespresso.com/wp-content/uploads/2021/06/espv3-slide.jpg");
+    box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.3);
+}
+
+
 a:after {
     background: none repeat scroll 0 0 transparent;
     bottom: 0;
@@ -163,7 +266,7 @@ a:after {
     height: 2px;
     left: 50%;
     position: relative;
-    background:white;
+    background-color: rgb(5, 119, 218);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
@@ -171,8 +274,84 @@ a:after {
 a:hover:after {
     width: 100%;
     left: 0;
+    
 }
 
+footer{
+    min-height: 5vh;
+    width: 100%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    font-family: $font-primary;
+    padding: 2rem;
+}
+
+@media(min-width: 700px){
+    .nav-menu {
+        position: fixed;
+        left: 0%;
+        background-color: white;
+        z-index: 1;
+        transition: 0.3s;
+        flex-direction: row;
+        width: 100%;
+        height: 100vh;
+        margin-top: 5vh;
+        text-align: center;
+        
+        justify-content: center;
+
+        li {
+            margin-top: 3rem;
+            padding: 4rem;
+            list-style-type: none;
+            
+
+            a {
+                color: rgb(5, 119, 218);
+                // color: black;
+                text-decoration: none;
+                padding: 0rem;
+                font-size:$mainFontSize;
+                font-family: $font-primary;
+                flex-direction: row;
+                text-transform: uppercase;
+            }
+            a:after {
+                background: none repeat scroll 0 0 transparent;
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 2px;
+                left: 50%;
+                
+                background:black;
+                
+                transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                width: 0;
+            }
+
+            a:hover:after {
+                width: 100%;
+                left: 0;
+                
+            }
+        }
+    }
+}
+    
+    .bar {
+        
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        background-color: black;
+        
+      
+    }
 
 
 

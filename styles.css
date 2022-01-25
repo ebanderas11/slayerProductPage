@@ -13,7 +13,6 @@ header {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 100%;
   padding-bottom: 0rem;
   z-index: 100;
   height: 10vh;
@@ -21,7 +20,7 @@ header {
 }
 
 header .nav-menu {
-  position: absolute;
+  position: fixed;
   left: 100%;
   background-color: white;
   z-index: 1;
@@ -47,7 +46,7 @@ header .nav-menu li {
 }
 
 header .nav-menu li a {
-  color: black;
+  color: #0577da;
   text-decoration: none;
   padding: 0rem;
   font-size: 3rem;
@@ -110,6 +109,77 @@ header .nav-menu li a:hover:after {
   background-color: black;
 }
 
+.hero {
+  font-family: "Readex Pro", sans-serif;
+  font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  border: 1.5px solid;
+  margin: 2rem;
+  -webkit-box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.hero h2, .hero h3 {
+  padding: 1rem;
+  color: #0577da;
+}
+
+.hero .btn {
+  background-color: #0577da;
+}
+
+.hero .btn:hover {
+  background-color: rgba(5, 119, 218, 0.472);
+  cursor: pointer;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 3rem;
+  margin-left: 1rem;
+}
+
+.info h2 {
+  font-size: 2rem;
+  font-family: "Open Sans", sans-serif;
+  padding: 1.5rem;
+  color: #0577da;
+}
+
+img {
+  height: 10rem;
+  width: auto;
+}
+
+form input {
+  padding: 1.5rem;
+}
+
+form .btn {
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -120,40 +190,88 @@ header .nav-menu li a:hover:after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
-}
-
-.container img {
+  height: 90vh;
   width: 100%;
-  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 2rem;
 }
 
-.container .btn {
-  position: absolute;
+.btn {
+  background-color: rgba(0, 0, 0, 0.513);
   padding: 2rem;
-  background-color: rgba(27, 27, 27, 0.774);
-  border-radius: 1rem;
+  margin: 2rem;
+  border: .2rem;
+  border-color: white;
+  border-style: solid;
 }
 
-.container .btn a {
-  color: white;
+.btn a {
   font-size: 2rem;
-  font-family: "Readex Pro", sans-serif;
+  text-decoration: none;
+  color: white;
+  font-family: "Open Sans", sans-serif;
 }
 
-a {
-  text-decoration: none;
-  padding: 0rem;
-  font-size: 1rem;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  text-transform: uppercase;
+.btn:hover {
+  background-color: rgba(39, 39, 39, 0.582);
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+.logo {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 90vw;
+  height: 5vh;
+}
+
+.logo-LP {
+  background-image: url("resources/steamlogo_lp-white2.png");
+}
+
+.logo-EP {
+  background-image: url("resources/steamlogo_EP-white3.png");
+}
+
+.logo-SG {
+  background-image: url("resources/sg-logo-white.png");
+}
+
+.logo-espv3 {
+  background-image: url("resources/espv3-logo-white.png");
+}
+
+.image-lp {
+  background-image: url("https://slayerespresso.com/wp-content/uploads/2021/05/steamlp-slide2.jpg");
+  -webkit-box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.3);
+          box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.image-ep {
+  background-image: url("https://slayerespresso.com/wp-content/uploads/2021/05/steamep-slide.jpg");
+  -webkit-box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.3);
+          box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.image-sg {
+  background-image: url("https://slayerespresso.com/wp-content/uploads/2021/06/sg-slide.jpg");
+  -webkit-box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.3);
+          box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.3);
+}
+
+.image-espv3 {
+  background-image: url("https://slayerespresso.com/wp-content/uploads/2021/06/espv3-slide.jpg");
+  -webkit-box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.3);
+          box-shadow: inset 2000px 0 0 0 rgba(0, 0, 0, 0.3);
 }
 
 a:after {
@@ -164,7 +282,7 @@ a:after {
   height: 2px;
   left: 50%;
   position: relative;
-  background: white;
+  background-color: #0577da;
   -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
@@ -173,5 +291,83 @@ a:after {
 a:hover:after {
   width: 100%;
   left: 0;
+}
+
+footer {
+  min-height: 5vh;
+  width: 100%;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Readex Pro", sans-serif;
+  padding: 2rem;
+}
+
+@media (min-width: 700px) {
+  .nav-menu {
+    position: fixed;
+    left: 0%;
+    background-color: white;
+    z-index: 1;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    margin-top: 5vh;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .nav-menu li {
+    margin-top: 3rem;
+    padding: 4rem;
+    list-style-type: none;
+  }
+  .nav-menu li a {
+    color: #0577da;
+    text-decoration: none;
+    padding: 0rem;
+    font-size: 3rem;
+    font-family: "Readex Pro", sans-serif;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    text-transform: uppercase;
+  }
+  .nav-menu li a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    background: black;
+    -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .nav-menu li a:hover:after {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: black;
 }
 /*# sourceMappingURL=styles.css.map */
